@@ -25,7 +25,7 @@ import net.sf.jasperreports.engine.data.*;
 import net.sf.jasperreports.export.*;
 
 @Controller
-public class ReportsController {
+public class GenerateRapportsController {
 	@Autowired
 	BmiequRepository bmiequRepository;
 	@Autowired
@@ -88,6 +88,10 @@ public class ReportsController {
 		// Export PDF Stream
 		JasperExportManager.exportReportToPdfStream(jasperPrint, response.getOutputStream());
 	}
+
+	/******************************************
+	*********** With JDBC Connection **********
+	*******************************************/
 
 	Statement stmt = null;
 	ResultSet resultset = null;

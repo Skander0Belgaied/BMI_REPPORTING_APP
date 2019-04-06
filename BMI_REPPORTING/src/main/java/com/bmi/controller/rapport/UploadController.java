@@ -28,7 +28,9 @@ RapportRepository rapportRepository;
 	//@GetMapping(path = "/upload")
 	   @PostMapping("/upload") // //new annotation since 4.3
     public String singleFileUpload(@RequestParam("file") MultipartFile file,
-                                   RedirectAttributes redirectAttributes) {
+                                   RedirectAttributes redirectAttributes
+                                  /* @RequestParam("file")  */                  
+    		) {
 		  // rapportRepository.save(entity)
 		 System.out.println(uploadServiceImpl.Uploadfile(file));
         return "/upload-status";

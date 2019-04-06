@@ -6,4 +6,6 @@ import com.bmi.app.entity.Rapport;
 @Repository
 public interface RapportRepository extends JpaRepository<Rapport, Long> {
 
+
+	Rapport findByRapportId(Long rapportid);
 }

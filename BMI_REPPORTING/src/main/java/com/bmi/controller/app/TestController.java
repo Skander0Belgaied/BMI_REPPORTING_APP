@@ -46,11 +46,7 @@ public class TestController {
 		return "tabetry";
 	      
 	}
-	@RequestMapping("/test")
-	public String test1() {
-		return "filtre";
-	      
-	}
+	
 	
 
 }

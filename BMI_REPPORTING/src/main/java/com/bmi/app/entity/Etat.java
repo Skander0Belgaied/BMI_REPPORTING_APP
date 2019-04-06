@@ -4,31 +4,34 @@ import java.io.Serializable;
 
 import javax.persistence.*;
 
+
 @Entity
+@Table(name = "etat")
 public class Etat implements Serializable {
-	@Id
-	private String etatSujet;
-	private Long etatFilter;
-	private Long etatRapport;
-	public String getEtatSujet() {
-		return etatSujet;
+
+	@EmbeddedId
+	EtatId  etatId;
+
+	public Etat() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
-	public void setEtatSujet(String etatSujet) {
-		this.etatSujet = etatSujet;
+
+	public Etat(com.bmi.app.entity.EtatId etatId) {
+		super();
+		etatId = etatId;
 	}
-	public Long getEtatFilter() {
-		return etatFilter;
+
+	public EtatId getEtatId() {
+		return etatId;
 	}
-	public void setEtatFilter(Long etatFilter) {
-		this.etatFilter = etatFilter;
+
+	public void setEtatId(EtatId etatId) {
+		etatId = etatId;
 	}
-	public Long getEtatRapport() {
-		return etatRapport;
-	}
-	public void setEtatRapport(Long etatRapport) {
-		this.etatRapport = etatRapport;
-	}
+
 	
 	
+
 
 }
